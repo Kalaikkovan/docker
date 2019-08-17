@@ -1,0 +1,11 @@
+FROM centos
+
+RUN yum -y install epel-release
+
+RUN yum -y install nginx
+
+
+RUN echo "Hey there" > /usr/share/nginx/html/index.html
+
+CMD ["/bin/bash", "-c", "nginx -g 'daemon off;'"]
+
